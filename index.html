@@ -16,10 +16,14 @@
        <h2>Relaxing Cats</h2>
         <main> <!--The main tag helps search enines and other developers find the main content of your page-->
             <a href="#footer">Jump to Bottom</a>
-            <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cat relaxing">
+
+            <br>
+            <div>
+            <img src="images/relaxing-cat.jpg" alt="A cat relaxing">
              <!--the img element is self-closing-->
              <!--All img elements must have an alt attribute. The text inside an alt attribute is used for screen readers to improve accessiblity and is displayed if the image fails to load-->
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, id eos. Dolorum ipsa officia placeat suscipit voluptates autem, cumque eaque, aperiam rem fugit sequi eligendi recusandae ratione asperiores, nihil maiores.</p>
+            </div>
+             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, id eos. Dolorum ipsa officia placeat suscipit voluptates autem, cumque eaque, aperiam rem fugit sequi eligendi recusandae ratione asperiores, nihil maiores.</p>
             <a href="https://www.istockphoto.com/photos/cat-relaxing" target="_blank">Click here to see more pictures of cats relaxing</a>
              <!--'a' is known as the anchor element; used to link content outside of your web page. 'a' elements need a 'destination web address'(URL address of the link) known as the 'href' attribute-->
              <!--the 'a' element closes like any normal tag with an anchor text between the opening and closing tags. The tag attributes are all contained in the opening tag-->
@@ -34,7 +38,7 @@
             <a href="#">Adopt a Cat Today</a>
              <!--Dead Links: In cases where you are not sure where to link to, you can set the href attribute to # which makes it a dead link-->
          <br>   
-             <a href="https://www.istockphoto.com/photos/cat-relaxing" ><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cat relaxing"></a>
+             <a href="images/relaxing-cat.jpg" ><img src="images/relaxing-cat.jpg" alt="A cat relaxing"></a>
              <!--You can turn images to links by nesting them within the anchor element-->
         
         <!--Lists-->
@@ -87,6 +91,8 @@
     <!--Form-->
     <form action="process.php" method="POST">
             <!--action is a tag attribute that submits the form to a certain page: method tag attribute could be POST or GET which describes how the data will be added to the database-->
+        <!--Text field-->
+        <div>
         <label>Most Loved Cat Species</label>
           <Input type="text" placeholder="Input a cat specie" required>  
             <!--input elements are self closing-->
@@ -94,7 +100,40 @@
             <!--with the required attribute, the user can't submit the form without filling in the required data-->
           <button type="submit">Submit</button>
             <!--clicking the submit button will send the data from the form to the URL or database specified in the forms 'action' attribute-->
-        <br><br>
+        </div>
+            <br>
+        <!--text area-->
+        <div>
+        <label>Message for Other Cat Lovers</label>
+          <textarea name="message"></textarea>
+        </div>
+        
+        <br>
+        <!--Select List-->
+        <div>
+            <label>What's the Colour of your Cat </label>
+            <select name="colors">
+                <option value="Black">Black</option>
+                <option value="White">White</option>
+                <option value="Red">Red</option>
+                <option value="Brown">Brown</option>
+            </select>
+        </div>
+        <br>
+        <!--Age selector-->
+        <div>
+            <label>Age</label>
+            <input type="number" name="age">
+        </div>
+        
+        <br>
+        <div>
+            <label>Your Cats' Birthday:</label>
+            <input type="date" name="birthday">
+        </div>
+
+        <br>
+        <div>
         <p>Where do Cats love most?</p>
         <label for="indoor">
           <input id="indoor" value="indoor" type="radio" name="indoor-outdoor" >
@@ -112,6 +151,8 @@
           <!--you can set the checkbox or radio button to be checked by default by using the 'checked' attribute in the input element-->
             Outdoor
         </label>
+        </div>
+
         <br><br>
         <p>Cat Personality Types</p>
         <label for="quiet">
@@ -132,9 +173,39 @@
             Violent
         </label>
     </form>
-    <div style="margin-top:500px"></div> 
             <!--the div element is a general purpose container for other elements-->
             <!--used to divide the page, create margin when you use the style attribute.-->
+            <!--the div element is a block level element; two types of elements - inline and block level-->
+    <br><br>
+
+    <!--Simple Code For Download Button Animation (excluding the css and javascript codes)-->
+    <button id="button" class="ready" onclick="clickButton ();">
+       <div class="message submitMessage"> 
+         <i class="fas fa download"></i>  
+         <span class="button-text id="default">Download Files</span>
+       </div>
+       <div class="message loadingMessage">
+           <svg xmins="http://www.w3.org/2000/svg" viewbox="0 0 19 17">
+               <circle class="loadingCircle" cx="2.2" cy="10" r="1.6"/>
+               <circle class="loadingCircle" cx="9.5" cy="10" r="1.6"/>
+               <circle class="loadingCircle" cx="16.8" cy="10" r="1.6"/>
+           </svg>
+       </div>
+       <div class="message successMessage">
+        <i class="fas fa-check-circle showtick"></i> 
+        <span class="button-text id="success">Downloaded</span>
+       </div>
+    </button>
+    <div style="margin-top:500px"></div> 
     <footer id="footer">Copyright Cat Photo App</footer>  
             <!--An id is an attribute that uniquely describes an element-->
-</html>
+
+            
+
+
+
+
+
+
+
+            </html>
